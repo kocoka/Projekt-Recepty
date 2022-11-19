@@ -1,0 +1,209 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
+s pribyvajici sirkou pridavame media query pro...
+tablety:
+@media (min-width: 480px) {
+}
+notebook/pc:
+@media (min-width: 860px) {
+}
+*/
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: whitesmoke;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+body {
+    background-color: rgba(29, 26, 26, 0.932);
+}
+.menu {
+    margin: 30px;
+    display:flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+.Hlavní {
+    width: 60%;
+    min-height: 220px;
+    border-bottom: 1px solid whitesmoke;
+    background-image:linear-gradient(to bottom,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(salat.jpg);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background: cover;
+}
+.další {
+    width: 60%;
+}
+.recept2{
+    background-image:linear-gradient(to bottom,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(chlebicek.jpg);
+    background-size: 100%;
+    background-position: center;
+    border-bottom: 1px solid whitesmoke;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.recept3{
+    background-image:linear-gradient(to bottom,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(tacos.jpg);
+    background-size: 100%;
+    background-position: center;
+    border-bottom: 1px solid whitesmoke;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.recept4{
+    background-image:linear-gradient(to bottom,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(cizrna.jpg);
+    background-size: 100%;
+    background-position: center;
+    border-bottom: 1px solid whitesmoke;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.recept5{
+    background-image:linear-gradient(to bottom,rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(burger.jpg);
+    background-size: 100%;
+    background-position: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.male {
+    padding: 10px;
+    font-size: 80%;
+    font-weight: 400;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.mensi {
+    padding: 10px;
+    font-size: 80%;
+    font-weight: 400;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.název1 {
+    padding: 10px;
+    font-size: 120%;
+    font-weight: 800;
+    display: flex;
+}
+.název {
+    padding: 10px;
+    font-size: 90%;
+    font-weight: 800;
+    display: flex;
+}
+.Hlavní {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+        
+@media(min-width:540px) {
+    .menu {
+        padding: 100px;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .další{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .recept2{
+        width: 50%;
+        border-right: 1px solid whitesmoke;
+    }
+    .recept3{
+        width: 50%;
+    }
+    .recept4{
+        width:50%;
+        border-bottom: 0px;
+        border-right: 1px solid whitesmoke;
+    }
+    .recept5{
+        width:50%;
+    }
+ }
+   
+@media(min-width:960px) {
+    .menu{
+        flex-direction: row;
+        align-content: center;
+        padding: 50px;
+    }
+    .Hlavní{
+        min-height: 300px;
+        max-width: 300px;
+        border-bottom: 0px;
+        border-right: 1px solid whitesmoke;
+    }
+    .recept2{
+        height: 150px;
+    }
+    .recept3{
+        height: 150px;
+    }
+    .recept4{
+        height: 150px;
+    }
+    .recept5{
+        height: 150px;
+    }
+    .název1{
+        font-size: 160%;
+    }
+    .název{
+        font-size: 130%;
+    }
+    .mensi{
+        font-size: 90%;
+    }
+    .male{
+        font-size: 90%;
+    }
+}
